@@ -39,10 +39,10 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Build Docker image
-        run: docker build -t ${{ env.IMAGE_NAME }}:${{ github.sha }} .
+        run: docker build -t task-api:${{ github.sha }} .
 
       - name: Save image to a tar file so the scan job can use it
-        run: docker save ${{ env.IMAGE_NAME }}:${{ github.sha }} -o image.tar
+        run: docker save task-api:${{ github.sha }} -o image.tar
 
       - name: Upload image artifact
         uses: actions/upload-artifact@v4
@@ -53,7 +53,7 @@ jobs:
       - name: Scan image with Trivy
         uses: aquasecurity/trivy-action@v0.36.0
         with:
-          image-ref: ${{ env.IMAGE_NAME }}:${{ github.sha }}
+          image-ref: task-api:${{ github.sha }}
           format: 'table'
           # Fail the pipeline if HIGH or CRITICAL vulnerabilities are found.
           # Set exit-code to '0' instead if you'd rather just see a report without blocking the build.
