@@ -1,0 +1,19 @@
+{
+  "name": "devops-ci-cd-task-api",
+  "version": "1.0.0",
+  "description": "Simple Task API used to demo a full CI/CD pipeline (GitHub Actions + Docker + Trivy + Render)",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "test": "jest --detectOpenHandles"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "nodemon": "^3.1.4",
+    "supertest": "^7.0.0"
+  }
+}
