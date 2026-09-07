@@ -5,9 +5,9 @@ A simple Express.js Task API built to demonstrate a complete, fully working, **c
 **GitHub → GitHub Actions (test → build → scan → push) → Docker Hub → Render (auto-deploy) → Discord notification**
 
  Pipeline status: **all stages passing**
- Live demo: `<your-render-url-here>`
- Repository: `<your-github-repo-url-here>`
- Docker image: `<your-dockerhub-repo-url-here>`
+ Live demo: `https://devops-ci-cd-task-api.onrender.com`
+ Repository: `https://github.com/Tanaya-28-cloud/devops-ci-cd-task-api.git`
+ Docker image: `https://hub.docker.com/r/tanayadocker/devops-ci-cd-task-api`
 
 ---
 
@@ -79,8 +79,8 @@ Everything runs on free tiers — no cloud spend, no credit card required.
 
 Example:
 ```bash
-curl <your-render-url-here>/tasks
-curl -X POST <your-render-url-here>/tasks -H "Content-Type: application/json" -d '{"title":"Ship the project"}'
+curl https://devops-ci-cd-task-api.onrender.com/tasks
+curl -X POST https://devops-ci-cd-task-api.onrender.com/tasks -H "Content-Type: application/json" -d '{"title":"Ship the project"}'
 ```
 
 ---
@@ -88,8 +88,7 @@ curl -X POST <your-render-url-here>/tasks -H "Content-Type: application/json" -d
 ## Run it locally
 
 ```bash
-git clone <your-github-repo-url-here>
-cd <repo-folder>
+git clone https://github.com/Tanaya-28-cloud/devops-ci-cd-task-api.git
 npm install
 npm run dev        # starts on http://localhost:3000
 ```
